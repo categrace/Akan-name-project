@@ -78,19 +78,23 @@
             </table>
         </div>
         <div class= "col-md-4">
-           <form onsubmit="getName(event)">
-            <label for="date">Enter date of birth</label>
-            <input id="date" type= "date"
-            placeholder="Enter your name">
-            <input type="submit" value= "submit"> <br>
-            <label for="gender">Choose your gender</label>
-            <select name="Enter your genger" id="male">
+
+             <form onsubmit="getName(event)">
+               <label for="date">Enter date of birth</label>
+               <input id="date" type= "date"
+                placeholder="Enter your name">
+               <input type="submit" value= "submit"> 
+               <label for="gender">Choose your gender</label>
+             <select name="Enter your genger" id="male">
                 <option value="">select...</option>
                 <option value="Male">Male</option>
-            </select>
-
-
-           </form> 
+                <option value="Female">Female</option>
+                <input type="submit" value= "submit"> 
+             </select>
+            </form> 
+            <div>
+                <p class="text-inverse">Output:</p>
+            </div>
 
         </div>
 
