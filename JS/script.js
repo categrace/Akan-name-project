@@ -3,11 +3,11 @@ const femaleAkanNames = ["Ama", "Akosua", "Adwoa", "Abenaa", "Akua", "Yaa", "Afu
 
 function getName() {
   let date = document.getElementById("date").value
-  let gender = document.getElementById("gender").checked
+  let gender = document.querySelector("input[name=gender]:checked")
   let dayOfTheWeek = new Date(date).toDateString();
   let birthDate = dayOfTheWeek.split(" ")[0]
   console.log(gender,date,birthDate);
-}
+
 
 
 
@@ -15,53 +15,50 @@ function getName() {
     if (birthDate === "Sun"){
       alert("Your Akan Name is:"+ maleAkanNames[0]);
     }
-    if (birthDate === "Mon"){
+    else if (birthDate === "Mon"){
       alert("Your Akan Name is:"+ maleAkanNames[1]);
     }
-    if (birthDate === "Tue"){
+    else if (birthDate === "Tue"){
       alert("Your Akan Name is:"+ maleAkanNames[2]);
     }
-    if (birthDate === "Wed"){
+    else if (birthDate === "Wed"){
       alert ("Your Akan Name is:"+ maleAkanNames[3]);
     }
-    if (birthDate === "Thur"){
+    else if (birthDate === "Thur"){
       alert ("Your Akan Name is:"+ maleAkanNames[4]); 
     }
-    if (birthDate === "Fri"){
+    else if (birthDate === "Fri"){
       alert ("Your Akan Name is:"+ maleAkanNames[5]);
     }
-    if (birthDate === "Sat"){
+    else {
       alert ("Your Akan Name is:"+ maleAkanNames[6]);
     }
-
-  } else if(gender ==="female") {
-    if (birthDate === "Sun")
+  }
+   else {
+    if (birthDate === "Sun"){
     alert("Your Akan Name is:" + femaleAkanNames[0]);
   }
-  if (birthDate === "Mon"){
+  else if (birthDate === "Mon"){
   alert("Your Akan Name is:" + femaleAkanNames[1]);
   }
-  if (birthDate === "Tue"){
+  else if (birthDate === "Tue"){
     alert("Your Akan Name is:" + femaleAkanNames[2]);
   }
-  if (birthDate === "Wed"){
+  else if (birthDate === "Wed"){
     alert("Your Akan Name is:" + femaleAkanNames[3]);
   }
-  if (birthDate === "Thur"){
+  else if (birthDate === "Thur"){
     alert("Your Akan Name is:" + femaleAkanNames[4]);
   }
-  if (birthDate === "Fri"){
+  else if (birthDate === "Fri"){
     alert("Your Akan Name is:" + femaleAkanNames[5]);
   }
-  if (birthDate === "Sat"){
+  else if (birthDate === "Sat"){
     alert("Your Akan Name is:" + femaleAkanNames[6]);
   }
-  
+} 
+}
 
   
 
-
-  
-  
-  
 
