@@ -3,15 +3,16 @@ const femaleAkanNames = ["Akosua", "Adwoa", "Abenaa", "Akua", "Yaa", "Afua", "Am
 
 function getName() {
   let date = document.getElementById("date").value
-  let gender = document.querySelector("input[name=gender]:checked")
+  let gender = document.querySelector("input[name=gender]:checked").value
   let dayOfTheWeek = new Date(date).toDateString();
   let birthDate = dayOfTheWeek.split(" ")[0]
   console.log(gender,date,birthDate);
 
 
-
-
-  if (gender === "Male") {
+if (gender===null || date===""){
+  alert ("Data input error")
+}
+  if (gender === "male"){
     if (birthDate === "Sun"){
       alert("Your Akan Name is:"+ maleAkanNames[0]);
     }
@@ -24,7 +25,7 @@ function getName() {
     else if (birthDate === "Wed"){
       alert ("Your Akan Name is:"+ maleAkanNames[3]);
     }
-    else if (birthDate === "Thur"){
+    else if (birthDate === "Thu"){
       alert ("Your Akan Name is:"+ maleAkanNames[4]); 
     }
     else if (birthDate === "Fri"){
@@ -36,25 +37,25 @@ function getName() {
   }
    else {
     if (birthDate === "Sun"){
-    alert("Your Akan Name is:" + femaleAkanNames[0]);
+    alert("Your Akan Name is:"+ femaleAkanNames[0]);
   }
   else if (birthDate === "Mon"){
-  alert("Your Akan Name is:" + femaleAkanNames[1]);
+  alert("Your Akan Name is:"+ femaleAkanNames[1]);
   }
   else if (birthDate === "Tue"){
-    alert("Your Akan Name is:" + femaleAkanNames[2]);
+    alert("Your Akan Name is:"+ femaleAkanNames[2]);
   }
   else if (birthDate === "Wed"){
-    alert("Your Akan Name is:" + femaleAkanNames[3]);
+    alert("Your Akan Name is:"+ femaleAkanNames[3]);
   }
-  else if (birthDate === "Thur"){
-    alert("Your Akan Name is:" + femaleAkanNames[4]);
+  else if (birthDate === "Thu"){
+    alert("Your Akan Name is:"+ femaleAkanNames[4]);
   }
   else if (birthDate === "Fri"){
-    alert("Your Akan Name is:" + femaleAkanNames[5]);
+    alert("Your Akan Name is:"+ femaleAkanNames[5]);
   }
-  else if (birthDate === "Sat"){
-    alert("Your Akan Name is:" + femaleAkanNames[6]);
+  else{
+    alert("Your Akan Name is:"+ femaleAkanNames[6]);
   }
 } 
 }
